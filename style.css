@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap');
+
+body{
+    font-family: "Maven Pro";
+    margin: 0;
+    background-color: #2A2A2A;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+}
+.topBar{
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 85vw;
+    height: 10vh;
+    background-color: #D9A31A;
+}
+.topBar input{
+    margin-left: 20px;
+    height: 50%;
+    width: 25vw;
+    border: 1px solid black;
+}
+.sideBar{
+    display: flex;
+    flex-direction: column;
+    width: 15vw;
+    background-color: #565656;
+    height: 100vh;
+}
+.sideBar .LogoText{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #D9A31A;
+    color: white;
+    font-weight: 600;
+    width: 15vw;
+    height: 10vh;
+}
+.sideBar div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 5vh;
+    color: white;
+}
+.sideBar div:hover{
+    
+}
