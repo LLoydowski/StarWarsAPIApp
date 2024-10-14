@@ -1,9 +1,13 @@
 
 
-function testAPI(){
-    fetch("https://swapi.dev/api/people")
-    .then(res => res.json())
-    .then(data => {
-        console.log(data)
+async function fetchPeople(){
+    let response = await fetch("https://swapi.dev/api/people")
+    let data = await response.json()
+    let results = data["results"]
+
+    console.log(data)
+
+    results.forEach(result => {
+        console.log(result.name)
     })
 }
