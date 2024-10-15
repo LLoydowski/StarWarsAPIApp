@@ -7,9 +7,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="loadingScreen disabled" id="loadingScreen">
+        <div class="loadingDiv"></div>
+    </div>
     <div class="container">
         <div class="topBar">
-            <input>
+            <input type="text" id="personSearch">
         </div>
         <div class="sideBar">
             <span class="LogoText">Star Wars Database</span>
@@ -22,54 +25,56 @@
             <div class="card person">
                 <div class="top">
                     <div class="basicInfo">
-                        <h1>Luke Skywalker</h1>
+                        <h1 id="personName">Luke Skywalker</h1>
                         <div class="info">
-                            <p>Sex: male</p>
-                            <p>Height: 175 cm</p>
-                            <p>Weight: 77 kg</p>
+                            <p id="sex">Sex:</p>
+                            <p id="personHeight">Height:</p>
+                            <p id="personWeight">Weight:</p>
                         </div>
                     </div>
-                    <div class="vehicles">
+                    <div class="vehicles" id="vehicles">
                         <h2>Vehicles:</h2>
                         <ul>
-                            <li>X-Wing Starfighter</li>
-                            <li>Millenium Falcon</li>
-                            <li>Millenium Falcon</li>
-                            <li>Millenium Falcon</li>
-                            <li>Millenium Falcon</li>
-                            <li>Millenium Falcon</li>
-                            <li>Millenium Falcon</li>
-                            <li>Millenium Falcon</li>
-                            <li>Millenium Falcon</li>
-                            <li>Millenium Falcon</li>
-                            <li>Millenium Falcon</li>
-                            <li>Millenium Falcon</li>
-                            <li>Millenium Falcon</li>
-                            <li>Millenium Falcon</li>
-                            <li>Millenium Falcon</li>
-                            <li>Millenium Falcon</li>
-                            <li>Millenium Falcon</li>
+                            <li>Millenium</li>
+                            <li>Millenium</li>
+                            <li>Millenium</li>
+                            <li>Millenium</li>
+                            <li>Millenium</li>
+                            <li>Millenium</li>
+                            <li>Millenium</li>
+                            <li>Millenium</li>
+                            <li>Millenium</li>
+                            <li>Millenium</li>
+                            <li>Millenium</li>
+                            <li>Millenium</li>
+                            <li>Millenium</li>
+                            <li>Millenium</li>
+                            <li>Millenium</li>
+                            <li>Millenium</li>
+                            <li>Millenium</li>
+                            <li>Millenium</li>
+                            <li>Millenium</li>
                         </ul>
                     </div>
-                    <div class="appearances">
+                    <div class="appearances" id="personAppearances">
                         <h2>Appeared in:</h2>
                         <ul>
-                            <li>A New Hope</li>
-                            <li>Empire Strikes Back</li>
-                            <li>Return of the Jedi</li>
-                            <li>Revange of the Sith</li>
-                            <li>Revange of the Sith</li>
-                            <li>Revange of the Sith</li>
+                            <li>Movie</li>
+                            <li>Movie</li>
+                            <li>Movie</li>
+                            <li>Movie</li>
+                            <li>Movie</li>
+                            <li>Movie</li>
                         </ul>
                     </div>
                 </div>
                 <div class="posters">
-                    <div class="poster disabled"><img src="posters/4.png"></div>
-                    <div class="poster disabled"><img src="posters/5.png"></div>
-                    <div class="poster"><img src="posters/6.png"></div>
-                    <div class="poster"><img src="posters/1.png"></div>
-                    <div class="poster"><img src="posters/2.png"></div>
-                    <div class="poster"><img src="posters/3.png"></div>
+                    <div posterID="4" class="poster disabled"><img src="posters/4.png"></div>
+                    <div posterID="5" class="poster disabled"><img src="posters/5.png"></div>
+                    <div posterID="6" class="poster disabled"><img src="posters/6.png"></div>
+                    <div posterID="1" class="poster disabled"><img src="posters/1.png"></div>
+                    <div posterID="2" class="poster disabled"><img src="posters/2.png"></div>
+                    <div posterID="3" class="poster disabled"><img src="posters/3.png"></div>
                 </div>
                 <img class="swLogo" src="posters/starwarslogo.png">
             </div>
