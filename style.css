@@ -19,12 +19,47 @@ body{
     height: 10vh;
     background-color: #D9A31A;
 }
-.topBar input{
-    margin-left: 20px;
+.topBar .input{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40vw;
+    margin-left: 5vw;
     height: 50%;
-    width: 25vw;
-    border: 1px solid black;
+
+    border: 2px solid #2A2A2A;
+}
+.topBar .input input{
+    padding: 0;
+    width: 39.5vw;
+    padding-left: 0.5vw;
+    height: 100%;
     outline: none;
+    border: none;
+    font-size: 2vw;
+}
+.topBar .input button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    border: none;
+
+    height: 5vh;
+    width: 5vh;
+}
+.topBar .input button img{
+    width: 50%;
+    height: 50%;
+    filter: brightness(0);
+}
+.topBar .mobileBar{
+    display: none;
+}
+.mobileBg{
+    display: none;
 }
 .sideBar{
     display: flex;
@@ -35,6 +70,7 @@ body{
 }
 .sideBar .LogoText{
     display: flex;
+    text-align: center;
     align-items: center;
     justify-content: center;
     background-color: #D9A31A;
@@ -90,6 +126,9 @@ body{
     right: 2vw;
     top: -2vh;
 }
+.card.hidden{
+    display: none;
+}
 
 .person .top{
     display: grid;
@@ -98,8 +137,6 @@ body{
     "info vehicles"
     "appearances vehicles"; 
 }
-
-
 .person .basicInfo{
     display: flex;
     flex-direction: column;
@@ -164,6 +201,78 @@ body{
     height: 4vh;
 }
 
+.starship .top{
+    display: grid;
+    grid-template-columns: 6fr 8fr;
+    grid-template-areas: 
+    "info vehicles"
+    "appearances vehicles"; 
+}
+.starship .basicInfo{
+    display: flex;
+    flex-direction: column;
+    grid-area: info;
+    height: 10vh;
+}
+.starship .basicInfo h1{
+    height: 4.5vh;
+    font-size: 2vw;
+    margin: 0;
+    margin-top: 1vh;
+    margin-bottom: 0.6vh;
+}
+.starship .basicInfo .info{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3vw;
+}
+.starship .info p{
+    margin: 0;
+    font-size: 1.3vw;
+} 
+
+.starship .pilots{
+    width: 70%;
+    grid-area: vehicles;
+    border-left: #2A2A2A solid 1px;
+    padding-left: 1vw;
+    height: 38vh;
+}
+.starship .pilots h2{
+    margin-top: 1.6vh;
+    font-size: 1.7vw;
+}
+.starship .pilots ul{
+    max-height: 30vh;
+    width: 27vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 1.2vw;
+    overflow: auto;
+}
+.starship .pilots li{
+    width: 15vw;
+    height: 4vh;
+}
+
+.starship .appearances{
+    grid-area: appearances;
+    height: 22vh;
+}
+.starship .appearances h2{
+    font-size: 1.7vw;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.starship .appearances ul{
+    margin-top: 1vh;
+    font-size: 1.2vw;
+}
+.starship .appearances li{
+    height: 4vh;
+}
+
 .posters{
     display: flex;
     flex-wrap: wrap;
@@ -175,6 +284,8 @@ body{
     width: 10vw;
     height: 14vw;
     transition: all 0.2s;
+    user-select: none;
+
 }
 .posters .poster.disabled{
     filter: brightness(0.3) grayscale(1);
@@ -239,11 +350,13 @@ body{
     .card{
         width: 85vw;
         height: 60vh;
-        
+        display: flex;
+        flex-direction: row;
     }
     .card .top{
         display: flex;
         flex-direction: column;
+        /* border-right: 2px solid blue; */
     }
     .card .top .appearances{
         order: 1;
@@ -256,25 +369,130 @@ body{
         font-size: 3vw;
         height: 3vh;
     }
+    .card .top .appearances ul{
+        padding-left: 5vw;
+    }
     .card .top .vehicles{
         border: none;
         order: 2;
-        height: 21vh;
+        height: 25vh;
+    }
+    .card .top .vehicles ul{
+        height: 22vh;
+        padding-left: 5vw;
     }
     .card .top .vehicles h2{
         font-size: 4vw;
     }
     .card .top .vehicles ul li{
         font-size: 3vw;
-        height: 3vh;
+        height: 3.5vh;
+        width: 25vw;
     }
     .card .top .basicInfo h1{
         font-size: 6vw;
+        width: 60vw;
+        margin-bottom: 0;
     }
     .card .top .basicInfo .info{
-        gap: 3vw;
+        gap: 2vw;
     }
     .card .top .basicInfo .info p{
+        font-size: 3vw;
+    }
+    .card .top .pilots{
+        border: none;
+        order: 2;
+        height: 25vh;
+    }
+    .card .top .pilots ul{
+        height: 22vh;
+        padding-left: 5vw;
+    }
+    .card .top .pilots h2{
         font-size: 4vw;
+    }
+    .card .top .pilots ul li{
+        font-size: 3vw;
+        height: 3.5vh;
+        width: 25vw;
+    }
+    .posters{
+        position: absolute;
+        width: 50vw;
+        display: flex;
+        align-self: center;
+        justify-content: flex-end;
+        padding-right: 2vw;
+        gap: 1.5vw;
+        right: 2vw;
+        bottom: 4.5vh;
+    }
+    .posters .poster{
+        width: 20vw;
+        height: 15vh;
+    }
+    .card .swLogo{
+        position: absolute;
+        top: 0;
+        right: 6vw;
+        width: 18vw;
+    }
+    .mobileBg{
+        position: absolute;
+        justify-content: flex-end;
+        height: 100%;
+        width: 100%;
+        z-index: 10;
+        backdrop-filter: blur(5px);
+        right: 0;
+    }
+    .mobile{
+        width: 70%;
+        background-color: #D9A31A;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 11;
+        color: white
+    }
+    .mobile span{
+        color: white;
+        margin-top: 4vw;
+        margin-bottom: 2vh;
+        font-weight: 600;
+        font-size: 6vw;
+    }
+    .mobile div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 5vh;
+    }
+    .mobile div:hover{
+        background-color: rgba(0,0,0, 0.2);
+    }
+    .topBar{
+        justify-content: space-between;
+    }
+    .topBar .mobileBar{
+        display: flex;
+        flex-direction: row;
+        color: white;
+        padding-right: 3vw;
+        align-items: center;
+        gap: 2vw;
+        font-weight: 600;
+    }
+    .topBar img{
+        width: 7vw;
+        height: 7vw;
+        filter: invert(1);
+    }
+    .topBar .input input{
+        font-size: 4vw;
+        width: 38vw;
+        padding-left: 2vw;
     }
 }

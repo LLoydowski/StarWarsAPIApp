@@ -11,21 +11,33 @@
         <div class="loadingDiv"></div>
     </div>
     <div class="container">
+        <div class="mobileBg">
+            <div class="mobile">
+                <span class="LogoText">Star Wars Database</span>
+                <div onclick="switchView('person')">People</div>
+                <div onclick="switchView('starship')">Starships</div>
+            </div>
+        </div>
         <div class="topBar">
-            <input type="text" id="personSearch">
+            <div class="input">
+                <input type="text" id="search">
+                <button onclick="fetchData()"><img src="posters/search.png"></button>
+            </div>
+            <div class="mobileBar">
+                <p>Star Wars Database</p>
+                <img src="posters/burger-bar.png" id="mobileBtn">
+            </div>
         </div>
         <div class="sideBar">
             <span class="LogoText">Star Wars Database</span>
-            <div>People</div>
-            <div class="disabled">Starships</div>
-            <div class="disabled">Planets</div>
-            <div class="disabled">Species</div>
+            <div onclick="switchView('person')">People</div>
+            <div onclick="switchView('starship')">Starships</div>
         </div>
         <div class="content">
             <div class="card person">
                 <div class="top">
                     <div class="basicInfo">
-                        <h1 id="personName">Luke Skywalker</h1>
+                        <h1 id="personName"></h1>
                         <div class="info">
                             <p id="sex">Sex:</p>
                             <p id="personHeight">Height:</p>
@@ -35,46 +47,51 @@
                     <div class="vehicles" id="vehicles">
                         <h2>Vehicles:</h2>
                         <ul>
-                            <li>Millenium</li>
-                            <li>Millenium</li>
-                            <li>Millenium</li>
-                            <li>Millenium</li>
-                            <li>Millenium</li>
-                            <li>Millenium</li>
-                            <li>Millenium</li>
-                            <li>Millenium</li>
-                            <li>Millenium</li>
-                            <li>Millenium</li>
-                            <li>Millenium</li>
-                            <li>Millenium</li>
-                            <li>Millenium</li>
-                            <li>Millenium</li>
-                            <li>Millenium</li>
-                            <li>Millenium</li>
-                            <li>Millenium</li>
-                            <li>Millenium</li>
-                            <li>Millenium</li>
                         </ul>
                     </div>
                     <div class="appearances" id="personAppearances">
                         <h2>Appeared in:</h2>
                         <ul>
-                            <li>Movie</li>
-                            <li>Movie</li>
-                            <li>Movie</li>
-                            <li>Movie</li>
-                            <li>Movie</li>
-                            <li>Movie</li>
                         </ul>
                     </div>
                 </div>
                 <div class="posters">
-                    <div posterID="4" class="poster disabled"><img src="posters/4.png"></div>
-                    <div posterID="5" class="poster disabled"><img src="posters/5.png"></div>
-                    <div posterID="6" class="poster disabled"><img src="posters/6.png"></div>
-                    <div posterID="1" class="poster disabled"><img src="posters/1.png"></div>
-                    <div posterID="2" class="poster disabled"><img src="posters/2.png"></div>
-                    <div posterID="3" class="poster disabled"><img src="posters/3.png"></div>
+                    <div draggable="false" posterID="4" class="poster disabled"><img src="posters/4.png"></div>
+                    <div draggable="false" posterID="5" class="poster disabled"><img src="posters/5.png"></div>
+                    <div draggable="false" posterID="6" class="poster disabled"><img src="posters/6.png"></div>
+                    <div draggable="false" posterID="1" class="poster disabled"><img src="posters/1.png"></div>
+                    <div draggable="false" posterID="2" class="poster disabled"><img src="posters/2.png"></div>
+                    <div draggable="false" posterID="3" class="poster disabled"><img src="posters/3.png"></div>
+                </div>
+                <img class="swLogo" src="posters/starwarslogo.png">
+            </div>
+            <div class="card starship hidden">
+                <div class="top">
+                    <div class="basicInfo">
+                        <h1 id="starshipName"></h1>
+                        <div class="info">
+                            <p id="starshipModel">Model:</p>
+                            <p id="starshipLength">Length:</p>
+                        </div>
+                    </div>
+                    <div class="pilots" id="pilots">
+                        <h2>Pilots:</h2>
+                        <ul>
+                        </ul>
+                    </div>
+                    <div class="appearances" id="starshipAppearances">
+                        <h2>Appeared in:</h2>
+                        <ul>
+                        </ul>
+                    </div>
+                </div>
+                <div class="posters">
+                    <div draggable="false" posterID="4" class="poster disabled"><img src="posters/4.png"></div>
+                    <div draggable="false" posterID="5" class="poster disabled"><img src="posters/5.png"></div>
+                    <div draggable="false" posterID="6" class="poster disabled"><img src="posters/6.png"></div>
+                    <div draggable="false" posterID="1" class="poster disabled"><img src="posters/1.png"></div>
+                    <div draggable="false" posterID="2" class="poster disabled"><img src="posters/2.png"></div>
+                    <div draggable="false" posterID="3" class="poster disabled"><img src="posters/3.png"></div>
                 </div>
                 <img class="swLogo" src="posters/starwarslogo.png">
             </div>
