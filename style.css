@@ -156,6 +156,7 @@ body{
     gap: 1vw;
 }
 .person .info p{
+    font-size: 1.8vh;
     margin: 0;
 } 
 

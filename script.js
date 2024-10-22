@@ -26,7 +26,7 @@ document.querySelector(".mobileBg").addEventListener("click", async () => {
     await sleep(10)
     document.querySelector(".mobileBg").style.display = "none"
 })
-
+    
 function fetchData(){
     switch(fetchType){
         case "person":
@@ -48,6 +48,7 @@ function switchView(view){
             document.querySelector(".person").classList.remove("hidden")
             fetchType = "person"
 
+            document.getElementById("starshipName").innerHTML = ''
             document.getElementById("starshipModel").innerHTML = 'Model: '
             document.getElementById("starshipLength").innerHTML = 'Length: '
             document.getElementById("pilots").children[1].innerHTML = ''
@@ -58,6 +59,7 @@ function switchView(view){
             document.querySelector(".starship").classList.remove("hidden")
             fetchType = "starship"
 
+            document.getElementById("personName").innerHTML = ''
             document.getElementById("sex").innerHTML = 'Sex: '
             document.getElementById("personHeight").innerHTML = 'Height: '
             document.getElementById("personWeight").innerHTML = 'Weight: '
